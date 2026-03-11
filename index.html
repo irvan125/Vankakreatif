@@ -1,16 +1,186 @@
-<header class="ampstart-headerbar fixed flex justify-between items-center px3">
-  <div class="ampstart-headerbar-title flex items-center">
-    <a href="/" class="text-decoration-none inline-block">
-      <h1 class="h4 bold caps" style="color: #021425; letter-spacing: 2px;">Vanka Kreatif</h1>
-    </a>
-  </div>
-  <nav class="ampstart-headerbar-nav hide xs-hide sm-hide md-block">
-    <ul class="list-reset m0 flex justify-end items-center">
-      <li class="ampstart-nav-item"><a class="text-decoration-none" href="#portfolio">Portofolio</a></li>
-      <li class="ampstart-nav-item ml3"><a class="text-decoration-none" href="#services">Layanan</a></li>
-      <li class="ampstart-nav-item ml3">
-        <a class="ampstart-btn ampstart-btn-secondary caps px3" href="https://wa.me/628123456789">Kontak</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html ⚡ lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Vanka Kreatif | Premium Visual Identity Studio</title>
+  <link rel="canonical" href="https://vankakreatif.id">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script custom-element="amp-img" src="https://cdn.ampproject.org/v0/amp-img-0.1.js" async></script>
+  <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+  <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:400,700|Crimson+Text:400,600" rel="stylesheet">
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <style amp-custom>
+    /* Integrasi Bassplate & Custom Vanka */
+    html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+    body{margin:0; background:#fff; color:#444; font-family:'Crimson Text', serif; -webkit-font-smoothing:antialiased}
+    
+    /* Grid System */
+    .flex{display:flex}.flex-wrap{flex-wrap:wrap}.justify-between{justify-content:space-between}.items-center{align-items:center}.center{text-align:center}
+    .col-12{width:100%} .px3{padding-left:1.5rem; padding-right:1.5rem} .mb4{margin-bottom:2.5rem} .mt4{margin-top:2.5rem}
+    .p4{padding:2.5rem} .mxn2{margin-left:-1rem; margin-right:-1rem} .px2{padding-left:1rem; padding-right:1rem}
+    @media (min-width:40rem){.sm-col-6{width:50%}} @media (min-width:52rem){.md-col-4{width:33.33%}.md-block{display:block}.md-col-6{width:50%}}
+
+    /* Typography */
+    .caps{text-transform:uppercase; letter-spacing:.15em} .bold{font-weight:700}
+    .h1{font-size:2.5rem; line-height:1.1} .h2{font-size:1.625rem} .h4{font-size:1.125rem} .h5{font-size:1rem}
+    .text-decoration-none{text-decoration:none} .list-reset{list-style:none; padding-left:0}
+
+    /* Header */
+    header{background:#fff; color:#021425; height:60px; border-bottom:1px solid #eee; position:fixed; top:0; width:100%; z-index:1000}
+    .ampstart-nav-item{font-family:Inconsolata, monospace; font-size:0.8rem; margin-left:1.5rem}
+
+    /* Hero */
+    .hero-container{position:relative; margin-top:60px; background:#000; overflow:hidden}
+    .hero-text-overlay{position:absolute; top:0; left:0; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; color:#fff; background:rgba(0,0,0,0.4)}
+
+    /* Buttons */
+    .ampstart-btn{display:inline-block; font-family:Inconsolata; font-weight:700; padding:1rem 2rem; border:1px solid #fff; background:transparent; color:#fff; cursor:pointer}
+    .btn-dark{background:#021425; color:#fff; border:none}
+
+    /* Portfolio & Section */
+    .section-label{font-family:Inconsolata; font-size:0.8rem; border-bottom:1px solid #eee; padding-bottom:0.5rem; margin-bottom:2rem}
+    .gallery-item:hover{opacity:0.8; transition:0.3s}
+    
+    /* Pricing */
+    .pricing-card{border:1px solid #eee; transition:0.3s}
+    .pricing-card:hover{box-shadow:0 10px 30px rgba(0,0,0,0.05)}
+    .gold-text{color:#b59410}
+
+    footer{background:#fafafa; padding:4rem 0; font-family:Inconsolata; font-size:0.8rem; color:#888}
+  </style>
+</head>
+
+<body>
+
+  <header class="flex justify-between items-center px3">
+    <div class="bold caps h4">VANKA KREATIF</div>
+    <nav class="md-block" style="display:none">
+      <ul class="list-reset m0 flex items-center">
+        <li class="ampstart-nav-item"><a href="#portfolio" class="text-decoration-none">Work</a></li>
+        <li class="ampstart-nav-item"><a href="#services" class="text-decoration-none">Services</a></li>
+        <li class="ampstart-nav-item"><a href="https://wa.me/628123456789" class="btn-dark px2 py1 text-decoration-none" style="color:#fff">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero-container">
+      <amp-img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" width="1200" height="700" layout="responsive" alt="Premium Design"></amp-img>
+      <div class="hero-text-overlay center p4">
+        <h1 class="h1 caps bold mb2">Elevating Brands</h1>
+        <p class="h4 mb4" style="max-width:500px; font-family:Montserrat">Identitas visual premium untuk bisnis yang ingin tampil beda di Jakarta Selatan.</p>
+        <a href="#portfolio" class="ampstart-btn caps text-decoration-none">View Portfolio</a>
+      </div>
+    </section>
+
+    <section id="portfolio" class="px3 mt4">
+      <div class="section-label caps bold">Selected Work Portfolio</div>
+      <div class="flex flex-wrap mxn2">
+        
+        <div class="col-12 sm-col-6 md-col-4 px2 mb4 gallery-item">
+          <amp-img src="https://picsum.photos/800/800?random=11" width="1" height="1" layout="responsive"></amp-img>
+          <h3 class="h5 bold caps mt2 mb1">Senopati Dining</h3>
+          <p class="h6 italic">F&B Branding</p>
+        </div>
+        <div class="col-12 sm-col-6 md-col-4 px2 mb4 gallery-item">
+          <amp-img src="https://picsum.photos/800/800?random=12" width="1" height="1" layout="responsive"></amp-img>
+          <h3 class="h5 bold caps mt2 mb1">Nexus Tech</h3>
+          <p class="h6 italic">Startup Identity</p>
+        </div>
+        <div class="col-12 sm-col-6 md-col-4 px2 mb4 gallery-item">
+          <amp-img src="https://picsum.photos/800/800?random=13" width="1" height="1" layout="responsive"></amp-img>
+          <h3 class="h5 bold caps mt2 mb1">Aurelia Jewelry</h3>
+          <p class="h6 italic">Luxury Goods</p>
+        </div>
+
+        <div class="col-12 sm-col-6 md-col-4 px2 mb4 gallery-item">
+          <amp-img src="https://picsum.photos/800/800?random=14" width="1" height="1" layout="responsive"></amp-img>
+          <h3 class="h5 bold caps mt2 mb1">Oase Architect</h3>
+          <p class="h6 italic">Minimalist Branding</p>
+        </div>
+        <div class="col-12 sm-col-6 md-col-4 px2 mb4 gallery-item">
+          <amp-img src="https://picsum.photos/800/800?random=15" width="1" height="1" layout="responsive"></amp-img>
+          <h3 class="h5 bold caps mt2 mb1">Vanka Wear</h3>
+          <p class="h6 italic">Apparel Design</p>
+        </div>
+        <div class="col-12 sm-col-6 md-col-4 px2 mb4 gallery-item">
+          <amp-img src="https://picsum.photos/800/800?random=16" width="1" height="1" layout="responsive"></amp-img>
+          <h3 class="h5 bold caps mt2 mb1">Karsa Wellness</h3>
+          <p class="h6 italic">Beauty & Spa</p>
+        </div>
+
+        <div class="col-12 sm-col-6 md-col-4 px2 mb4 gallery-item">
+            <amp-img src="https://picsum.photos/800/800?random=17" width="1" height="1" layout="responsive"></amp-img>
+            <h3 class="h5 bold caps mt2 mb1">Legal Partner</h3>
+            <p class="h6 italic">Corporate Identity</p>
+        </div>
+        <div class="col-12 sm-col-6 md-col-4 px2 mb4 gallery-item">
+            <amp-img src="https://picsum.photos/800/800?random=18" width="1" height="1" layout="responsive"></amp-img>
+            <h3 class="h5 bold caps mt2 mb1">Skena Event</h3>
+            <p class="h6 italic">Creative Organizer</p>
+        </div>
+        <div class="col-12 sm-col-6 md-col-4 px2 mb4 gallery-item">
+            <amp-img src="https://picsum.photos/800/800?random=19" width="1" height="1" layout="responsive"></amp-img>
+            <h3 class="h5 bold caps mt2 mb1">Antar Cepat</h3>
+            <p class="h6 italic">Logistics Branding</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="px3 mt4 mb4 py4" style="background:#fcfcfc">
+      <div class="section-label caps bold">Pricing & Services</div>
+      <div class="flex flex-wrap mxn3">
+        
+        <div class="col-12 md-col-6 px3 mb4">
+          <div class="pricing-card p4 bg-white">
+            <h2 class="h2 bold caps mb1">Essential</h2>
+            <p class="gold-text bold h3 mb3">Rp750.000</p>
+            <ul class="list-reset h5 mb4 italic">
+              <li class="mb2">• 2 Premium Logo Concepts</li>
+              <li class="mb2">• High Res (PNG, JPG, Vector)</li>
+              <li class="mb2">• 2 Times Revision</li>
+              <li class="mb2">• 3-5 Business Days Delivery</li>
+            </ul>
+            <a href="https://wa.me/628123456789" class="ampstart-btn btn-dark center block text-decoration-none">Order Essential</a>
+          </div>
+        </div>
+
+        <div class="col-12 md-col-6 px3 mb4">
+          <div class="pricing-card p4 bg-white" style="border: 2px solid #000">
+            <h2 class="h2 bold caps mb1">Professional</h2>
+            <p class="gold-text bold h3 mb3">Rp2.500.000</p>
+            <ul class="list-reset h5 mb4 italic">
+              <li class="mb2">• 3-4 Branding Concepts</li>
+              <li class="mb2">• Brand Identity Guidelines Book</li>
+              <li class="mb2">• Stationery Design (Business Card, Letterhead)</li>
+              <li class="mb2">• Unlimited Revision (Reasonable)</li>
+            </ul>
+            <a href="https://wa.me/628123456789" class="ampstart-btn btn-dark center block text-decoration-none">Order Professional</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="center">
+    <div class="px3">
+      <p class="caps bold mb2" style="color:#021425">Vanka Kreatif Jakarta</p>
+      <p class="mb4">Identity & Visual Branding Studio. Cilandak, Jakarta Selatan.</p>
+      <div class="flex justify-center h5 caps">
+        <a href="#" class="mx2 text-decoration-none">Instagram</a>
+        <a href="#" class="mx2 text-decoration-none">Behance</a>
+        <a href="#" class="mx2 text-decoration-none">Email</a>
+      </div>
+      <p class="mt4">© 2026 Vanka Kreatif. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
