@@ -3,29 +3,70 @@
 <head>
   <meta charset="utf-8">
   <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-element="amp-img" src="https://cdn.ampproject.org/v0/amp-img-0.1.js"></script>
   
-  <title>Vanka Kreatif | Jasa Desain Logo & Branding Profesional Jakarta</title>
+  <title>Vanka Kreatif | Premium Visual Identity Studio | Jakarta Selatan</title>
   <link rel="canonical" href="https://vankakreatif.id">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+
   <style amp-custom>
-    body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; }
-    header { padding: 20px; background: #fff; border-bottom: 1px solid #ddd; }
-    .hero { padding: 60px 20px; text-align: center; background: #fafafa; }
-    h1 { font-size: 2.2rem; margin-bottom: 10px; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    
-    /* Tabel Harga */
-    .pricing-table { display: flex; flex-direction: column; gap: 20px; }
-    .card { border: 1px solid #eee; padding: 20px; text-align: center; border-radius: 8px; }
+    /* RESET & DASAR */
+    * { box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; line-height: 1.8; color: #1a1a1a; margin: 0; background-color: #ffffff; }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    /* UNTUK MENGHINDARI KESAN 'KOSONG' */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
+    section { padding: 80px 0; }
+
+    /* HEADER / NAVIGATION */
+    header { background: #fff; padding: 20px 0; border-bottom: 1px solid #eaeaea; position: fixed; width: 100%; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; }
+    .logo-text { font-weight: 700; font-size: 1.4rem; letter-spacing: 1px; }
+    .nav-links a { margin-left: 25px; font-weight: 600; font-size: 0.9rem; color: #555; }
+    .nav-links a:hover { color: #b59410; } /* Warna Emas */
+
+    /* HERO SECTION */
+    .hero { padding: 160px 0 100px; background: #fafafa; border-bottom: 1px solid #eee; text-align: center; }
+    .hero h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; color: #111; }
+    .hero p { font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto 40px; }
     
     /* Tombol */
-    .btn { display: inline-block; padding: 12px 25px; background: #000; color: #fff; text-decoration: none; border-radius: 4px; }
-    
-    /* Footer */
-    footer { text-align: center; padding: 40px; background: #111; color: #fff; }
+    .btn-gold { display: inline-block; padding: 16px 35px; background: #b59410; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(181, 148, 16, 0.3); }
+    .btn-gold:hover { background: #967c0d; }
+
+    /* GALERI PORTFOLIO (GRID) */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+    .gallery-item { border: 1px solid #eee; background: #fff; overflow: hidden; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); transition: 0.3s; }
+    .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .gallery-text { padding: 20px; }
+    .gallery-text h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
+    .gallery-text p { margin: 0; color: #777; font-size: 0.9rem; }
+
+    /* HARGA & LAYANAN */
+    .price-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .price-card { background: #111; color: #fff; padding: 50px; border-radius: 8px; }
+    .price-card.featured { border: 3px solid #b59410; position: relative; }
+    .featured-label { position: absolute; top: -15px; right: 20px; background: #b59410; color: #fff; padding: 5px 15px; font-size: 0.8rem; font-weight: 600; border-radius: 20px; }
+    .price-card h3 { font-size: 1.8rem; color: #b59410; margin-top: 0; }
+    .price-card h4 { font-size: 2.5rem; margin: 10px 0 20px; font-weight: 700; }
+    .price-card ul { list-style: none; padding: 0; margin-bottom: 40px; }
+    .price-card li { margin-bottom: 15px; display: flex; align-items: center; color: #ccc; }
+    .price-card li::before { content: '✓'; color: #b59410; margin-right: 10px; font-weight: 700; }
+    .btn-white { display: inline-block; padding: 16px 35px; background: #fff; color: #111; border-radius: 4px; font-weight: 600; text-align: center; width: 100%; }
+
+    /* FOOTER */
+    footer { background: #111; color: #fff; padding: 60px 0; text-align: center; }
+    .footer-links a { margin: 0 15px; color: #aaa; }
+    .footer-links a:hover { color: #fff; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .price-grid { grid-template-columns: 1fr; }
+    }
   </style>
 
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -33,43 +74,105 @@
 
 <body>
 
-  <header><strong>VANKA KREATIF</strong></header>
+  <header>
+    <div class="container nav-container">
+      <div class="logo-text">VANKA KREATIF</div>
+      <nav class="nav-links">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Layanan</a>
+        <a href="https://wa.me/628123456789" class="btn-gold" style="padding: 10px 20px;">Kontak</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="hero">
-    <h1>Identitas Visual yang Mengangkat Bisnis Anda.</h1>
-    <p>Solusi desain logo dan branding premium untuk pasar Jakarta Selatan.</p>
+    <div class="container">
+      <h1>Identitas Visual yang Mengangkat Bisnis Anda.</h1>
+      <p>Kami merancang logo dan sistem branding premium khusus untuk startup & UMKM ambisius di Jakarta Selatan.</p>
+      <a href="https://wa.me/628123456789" class="btn-gold">Mulai Konsultasi Gratis</a>
+    </div>
   </main>
 
-  <section id="services">
-    <h2>Paket Layanan</h2>
-    <div class="pricing-table">
-      <div class="card">
-        <h3>Essential Logo</h3>
-        <p>Mulai dari Rp750.000</p>
-        <p>2 Konsep, High Resolution, File Master.</p>
-        <a href="#contact" class="btn">Pilih Paket</a>
-      </div>
-      <div class="card">
-        <h3>Professional Branding</h3>
-        <p>Mulai dari Rp2.500.000</p>
-        <p>Logo, Brand Guidelines, Business Card, 3 Konsep.</p>
-        <a href="#contact" class="btn">Pilih Paket</a>
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portofolio Terpilih</h2>
+      <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <amp-img src="https://via.placeholder.com/400x300?text=Senopati+Cafe+Logo" width="400" height="300" layout="responsive" alt="Logo Cafe"></amp-img>
+          <div class="gallery-text">
+            <h3>Senopati Brews</h3>
+            <p>Branding Cafe & F&B</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <amp-img src="https://via.placeholder.com/400x300?text=Startup+Tech+Logo" width="400" height="300" layout="responsive" alt="Logo Startup"></amp-img>
+          <div class="gallery-text">
+            <h3>Nusantara Tech</h3>
+            <p>Identitas Visual Startup B2B</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <amp-img src="https://via.placeholder.com/400x300?text=Fashion+Brand+Logo" width="400" height="300" layout="responsive" alt="Logo Fashion"></amp-img>
+          <div class="gallery-text">
+            <h3>Vanka Wear</h3>
+            <p>Branding Fashion Lokal</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Mulai Proyek Anda</h2>
-    <form action-xhr="https://example.com/submit" method="post">
-      <input type="text" name="name" placeholder="Nama Anda" required><br><br>
-      <input type="email" name="email" placeholder="Email" required><br><br>
-      <textarea name="message" placeholder="Ceritakan ide bisnis Anda..."></textarea><br><br>
-      <input type="submit" value="Kirim Konsultasi" class="btn">
-    </form>
+  <section id="services" style="background-color: #f9f9f9;">
+    <div class="container">
+      <h2>Paket Kolaborasi</h2>
+      <div class="price-grid">
+        
+        <div class="price-card">
+          <h3>Essential</h3>
+          <h4>Rp750.000</h4>
+          <ul>
+            <li>2 Konsep Logo Kustom</li>
+            <li>Revisi 2 Kali</li>
+            <li>File Master (AI, EPS, PNG)</li>
+            <li>Pengerjaan 3-5 Hari</li>
+          </ul>
+          <a href="https://wa.me/628123456789" class="btn-white">Pilih Essential</a>
+        </div>
+        
+        <div class="price-card featured">
+          <span class="featured-label">Paling Populer</span>
+          <h3>Professional</h3>
+          <h4>Rp2.500.000</h4>
+          <ul>
+            <li>3 Konsep Logo Kustom</li>
+            <li>Revisi Sepuasnya (Wajar)</li>
+            <li>Brand Guidelines Book (10+ Halaman)</li>
+            <li>Desain Kartu Nama & Kop Surat</li>
+            <li>Prioritas Pengerjaan</li>
+          </ul>
+          <a href="https://wa.me/628123456789" class="btn-white" style="background: #b59410; color: #fff;">Pilih Professional</a>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2026 Vanka Kreatif. Jakarta Selatan.</p>
+    <div class="container">
+      <p><strong>VANKA KREATIF</strong></p>
+      <p>Visual Identity Studio</p>
+      <p>Cilandak, Jakarta Selatan.</p>
+      <div class="footer-links" style="margin-top: 30px;">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Layanan</a>
+        <a href="https://instagram.com/vankakreatif">Instagram</a>
+      </div>
+      <p style="margin-top: 40px; font-size: 0.8rem; color: #777;">&copy; 2026 Vanka Kreatif. All Rights Reserved.</p>
+    </div>
   </footer>
 
 </body>
